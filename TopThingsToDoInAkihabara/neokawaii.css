@@ -1,0 +1,134 @@
+/*
+    Akihabara Guide - Neo-Kawaii Style
+    A bold, modern, and vibrant take on the kawaii aesthetic.
+    Features: high-saturation colors, clean layout, and rounded elements.
+*/
+
+/* --- Google Fonts (REQUIRED) --- */
+/* Add the following line to the <head> of your HTML file:
+   <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Varela+Round&display=swap" rel="stylesheet">
+*/
+
+:root {
+    --bg-color: #fcfcfc;        /* Off-white */
+    --text-color: #333333;      /* Dark text */
+    --accent-1: #ff4081;        /* Vibrant pink */
+    --accent-2: #42a5f5;        /* Electric blue */
+    --accent-3: #ffeb3b;        /* Bright yellow */
+    --card-bg: #ffffff;         /* White card background */
+}
+
+body {
+    font-family: 'Varela Round', 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 5px;
+    padding: 0;
+    counter-reset: h3_i;
+}
+
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 40px;
+}
+
+h1 {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 3em;
+    color: var(--accent-1);
+    text-align: center;
+    text-shadow: 2px 2px var(--accent-2);
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--accent-2);
+    background-color: var(--accent-3);
+    border-radius: 10px;
+    padding: 8px 15px;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+h3 {
+    margin-top: 1.5em;
+    counter-increment: h3_i;
+    font-size: 1.8em;
+    color: var(--accent-2);
+    background-color: var(--accent-3);
+    border-radius: 10px;
+    padding: 8px 15px;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3::before {
+    content: counter(h3_i) ". ";
+    color: var(--accent-1);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.location-card {
+    background-color: var(--card-bg);
+    border: 3px solid var(--accent-1);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 35px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 64, 129, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.location-card:hover {
+    transform: scale(1.02);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15), -8px -8px 20px rgba(255, 64, 129, 0.15);
+}
+
+a {
+    color: var(--accent-2);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+    color: var(--accent-1);
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.info-block {
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+    .container {
+        margin: 15px auto;
+        padding: 0 20px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.6em;
+        display: block; /* Stack headings on small screens */
+    }
+}
+
+
+img {
+    border: 3px solid var(--accent-2);
+    border-radius: 10px;
+    padding: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
