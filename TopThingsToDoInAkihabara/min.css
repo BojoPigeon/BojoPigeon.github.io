@@ -1,0 +1,98 @@
+/*
+    Akihabara Guide - Minimalist Style
+    A simple, clean, and highly readable design.
+*/
+
+:root {
+    --text-color: #333;
+    --background-color: #f8f8f8;
+    --card-background: #fff;
+    --accent-color: #007bff; /* A nice, clean blue */
+    --link-color: #007bff;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 5px;
+    padding: 0;
+    counter-reset: h3_i;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--accent-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+h3 {
+    margin-top: 1.5em;
+    counter-increment: h3_i;
+    font-size: 1.8em;
+    color: var(--accent-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 10px;
+}
+
+h3::before {
+    content: counter(h3_i) ". ";
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+
+p {
+    margin-bottom: 15px;
+}
+
+.location-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.info-block {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+}
+
+
+img {
+    border: 3px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

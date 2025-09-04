@@ -1,0 +1,98 @@
+/*
+    Akihabara Guide - Classic Tokyo
+    A warm, inviting, and traditional style.
+*/
+
+:root {
+    --text-color: #4b4b4b;
+    --background-color: #fafafa;
+    --card-background: #fff;
+    --accent-color: #a30000; /* A deep red, like the Japanese flag */
+    --link-color: #0d47a1; /* A traditional blue */
+    --border-color: #e8e8e8;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 5px;
+    padding: 0;
+    counter-reset: h3_i;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: var(--accent-color);
+    text-align: center;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--link-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+h3 {
+    margin-top: 1.5em;
+    counter-increment: h3_i;
+    font-size: 1.8em;
+    color: var(--link-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+h3::before {
+    content: counter(h3_i) ". ";
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.location-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.info-block {
+    font-style: italic;
+    color: #777;
+    margin-top: 15px;
+}
+
+img {
+    border: 3px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
