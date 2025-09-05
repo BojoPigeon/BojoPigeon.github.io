@@ -1,0 +1,155 @@
+/* Importing fonts from Google Fonts for the digital/pixelated look */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+:root {
+  --bg-color: #2e0847; /* Dark purple, a little edgy */
+  --text-color: #e0e0e0; /* Light gray for contrast */
+  --heading-color: #ff00ff; /* Bright neon magenta/pink */
+  --accent-color: #00ffff; /* Bright neon cyan/blue */
+  --card-bg: #1c0529; /* Slightly darker purple for cards */
+}
+
+body {
+  font-family: 'Press Start 2P', 'Kosugi Maru', 'Segoe UI', Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 5px;
+  padding: 0;
+  counter-reset: h3_i;
+}
+
+.container {
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-family: 'VT323', monospace;
+  font-size: 3.5em;
+  color: var(--heading-color);
+  text-align: center;
+  text-shadow: 2px 2px 0px var(--accent-color); /* Neon glow effect */
+  margin-bottom: 20px;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 10px;
+  /* Add a subtle glitch animation */
+  animation: glitch 1s infinite;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: var(--heading-color);
+  border-left: 5px solid var(--accent-color);
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-top: 35px;
+  font-family: 'Press Start 2P', monospace;
+  position: relative;
+  /* Add a neon border effect */
+  box-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color);
+  border-left: 5px solid var(--accent-color);
+}
+
+h3 {
+  margin-top: 1.5em;
+  counter-increment: h3_i;
+  font-size: 1.5em;
+  color: var(--heading-color);
+  border-left: 5px solid var(--accent-color);
+  border-radius: 5px;
+  padding-left: 10px;
+  font-family: 'Press Start 2P', monospace;
+}
+
+h3::before {
+  content: counter(h3_i) ". ";
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.location-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color) inset;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  /* Add a subtle scanline pattern */
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+a:hover {
+  color: var(--heading-color);
+  text-decoration: underline;
+}
+
+.info-block {
+  font-style: italic;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+  .container {
+    margin: 10px auto;
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+img {
+  border: 3px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 3px;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Glitch animation for headings */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 0px var(--accent-color), -2px -2px 0px var(--heading-color);
+  }
+  25% {
+    text-shadow: -2px 2px 0px var(--accent-color), 2px -2px 0px var(--heading-color);
+  }
+  50% {
+    text-shadow: 2px -2px 0px var(--accent-color), -2px 2px 0px var(--heading-color);
+  }
+  75% {
+    text-shadow: -2px -2px 0px var(--accent-color), 2px 2px 0px var(--heading-color);
+  }
+  100% {
+    text-shadow: 2px 2px 0px var(--accent-color), -2px -2px 0px var(--heading-color);
+  }
+}
+
+
