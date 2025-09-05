@@ -86,10 +86,6 @@ p {
     transition: transform 0.3s ease-in-out;
 }
 
-.location-card:hover {
-    transform: scale(1.02);
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15), -8px -8px 20px rgba(255, 64, 129, 0.15);
-}
 
 a {
     color: var(--accent-2);
