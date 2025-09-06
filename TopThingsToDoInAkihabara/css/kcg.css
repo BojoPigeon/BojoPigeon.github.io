@@ -1,7 +1,7 @@
 /* Importing fonts from Google Fonts for the digital/pixelated look */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
 :root {
   --bg-color: #2e0847; /* Dark purple, a little edgy */
@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 25px auto;
   padding: 0 20px;
 }
@@ -152,4 +152,85 @@ img {
   }
 }
 
+hr {
+  border: none;
+  height: 5px;
+  background-color: transparent;
+  margin: 40px 0;
+  position: relative;
+  overflow: visible;
+}
 
+hr::before, hr::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color);
+  animation: hr-glitch 1.5s infinite;
+}
+
+hr::before {
+  top: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent-color) 0,
+    var(--accent-color) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+}
+
+hr::after {
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent-color) 0,
+    var(--accent-color) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  animation-delay: 0.75s;
+}
+
+/* Styling for form elements to match the cyber girl theme */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--heading-color);
+    font-family: 'Press Start 2P', monospace;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    appearance: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color) inset;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+select:hover {
+    border-color: var(--heading-color);
+    box-shadow: 0 0 5px var(--heading-color), 0 0 10px var(--heading-color) inset;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--heading-color);
+    box-shadow: 0 0 8px var(--heading-color), 0 0 15px var(--heading-color) inset;
+}
+
+option {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}

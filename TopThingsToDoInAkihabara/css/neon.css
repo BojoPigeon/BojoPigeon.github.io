@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 0 20px;
 }
@@ -99,4 +99,50 @@ img {
   border-radius: 5px;
   padding: 3px;
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+hr {
+  border: none;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  border-radius: 2.5px;
+  margin: 40px 0;
+  box-shadow: 0 0 10px var(--accent-1), 0 0 20px var(--accent-2);
+}
+
+/* Styling for form elements to match the neon vibe */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--accent-1);
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--accent-2);
+    border-radius: 5px;
+    background-color: var(--card-background);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f0f0f0'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+select:hover,
+select:focus {
+    outline: none;
+    border-color: var(--accent-1);
+    box-shadow: 0 0 8px rgba(255, 0, 119, 0.5);
+}
+
+option {
+    background-color: var(--card-background);
+    color: var(--text-color);
 }

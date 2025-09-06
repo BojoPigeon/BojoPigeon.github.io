@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-    max-width: 850px;
+    max-width: 1000px;
     margin: 30px auto;
     padding: 0 40px;
 }
@@ -127,4 +127,13 @@ img {
     border-radius: 10px;
     padding: 3px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+hr {
+    border: none;
+    height: 12px;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    border-radius: 6px;
+    margin: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
