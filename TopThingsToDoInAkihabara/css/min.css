@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 0 20px;
 }
@@ -95,4 +95,47 @@ img {
     border-radius: 5px;
     padding: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 40px 0;
+}
+
+/* Styling for form elements to match the minimalist theme */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--card-background);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:hover {
+    border-color: var(--accent-color);
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+option {
+    background-color: var(--card-background);
+    color: var(--text-color);
 }

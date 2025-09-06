@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 0 20px;
 }
@@ -95,4 +95,60 @@ img {
     border-radius: 5px;
     padding: 3px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+hr::before, hr::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+hr::before {
+    left: 15%;
+}
+
+hr::after {
+    right: 15%;
+}
+
+/* Styling for form elements to match the warm, traditional theme */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--accent-color);
+    font-family: 'Merriweather', serif;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--card-background);
+    color: var(--text-color);
+    font-family: 'Merriweather', serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:hover {
+    border-color: var(--link-color);
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--link-color);
+    box-shadow: 0 0 5px rgba(13, 71, 161, 0.2);
+}
+
+option {
+    background-color: var(--card-background);
+    color: var(--text-color);
 }

@@ -1,0 +1,133 @@
+/* * 2Channel / Futaba Channel inspired stylesheet 
+ * The aesthetic of early 2000s Japanese web forums.
+ * This style uses a simple, nostalgic color palette and a pixelated font.
+ */
+
+
+:root {
+    --bg-color: #f0f0e0;
+    --text-color: #333333;
+    --link-color: #0000ee;
+    --visited-link-color: #551a8b;
+    --comment-bg: #e5e5d5;
+    --comment-border: #bbbb99;
+    --header-color: #cc0000;
+}
+
+body {
+    font-family: 'Mona Font', monospace; /* Use Mona, with monospace as a fallback */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    margin: 5px;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--header-color);
+    font-family: 'Mona Font', monospace;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--visited-link-color);
+}
+
+a:hover {
+    color: var(--header-color);
+}
+
+/* Comment or Post Block */
+.comment-block {
+    background-color: var(--comment-bg);
+    border: 1px solid var(--comment-border);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+
+.comment-header {
+    font-size: 0.9em;
+    color: var(--header-color);
+    font-weight: bold;
+}
+
+.comment-text {
+    font-size: 1.0em;
+    margin-top: 5px;
+}
+
+/* Quote/Reply style */
+.quote {
+    color: #448844;
+}
+
+/* Custom classes for the old-school feel */
+.dotted-line {
+    border: none;
+    border-top: 1px dotted #888888;
+    margin: 10px 0;
+}
+
+.image-container {
+    padding: 5px;
+    border: 1px solid #cccccc;
+    display: inline-block;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+hr {
+    border: none;
+    border-top: 1px dotted var(--text-color);
+    margin: 20px 0;
+}
+
+/* Styling for form elements to match the forum aesthetic */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--header-color);
+}
+
+select {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid var(--comment-border);
+    background-color: var(--comment-bg);
+    color: var(--text-color);
+    font-family: 'Mona Font', monospace;
+    font-size: 1.0em;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+select:hover,
+select:focus {
+    outline: 1px dotted var(--text-color);
+    outline-offset: -1px;
+    border: 1px solid var(--header-color);
+}
+
+option {
+    background-color: var(--comment-bg);
+    color: var(--text-color);
+}
