@@ -34,8 +34,7 @@ h1 {
   font-size: 2.8em;
   color: var(--heading-color);
   text-align: center;
-  /* Simulates the glow of a neon sign */
-  text-shadow: 0 0 5px var(--heading-color), 0 0 10px rgba(255, 99, 71, 0.5);
+  text-shadow: 0 0 1px var(--heading-color), 0 0 10px rgba(255, 99, 71, 0.5);
   margin-bottom: 20px;
   border-bottom: 3px solid var(--accent-color);
   padding-bottom: 10px;
