@@ -1,0 +1,125 @@
+/*
+ * Akiba Night Alley Theme
+ * Inspired by the quiet, narrow streets of Akihabara at night.
+ * The theme uses a dark, moody palette with neon accents and subtle glows
+ * to reflect the streetlights and signs in the photos.
+ */
+
+:root {
+  --bg-color: #151525;         /* Deep, dark blue-black to represent the night */
+  --text-color: #dcdcdc;       /* Soft, light gray for readability */
+  --heading-color: #ff6347;    /* A vibrant neon red/orange from the signs */
+  --accent-color: #00e5ff;     /* A cool, cyan-blue to contrast the red */
+  --card-bg: #1e1e35;          /* A slightly lighter shade for cards and panels */
+  --border-color: #3d3d5f;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 7px;
+  padding: 0;
+  counter-reset: h3_i;
+}
+
+.container {
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2.8em;
+  color: var(--heading-color);
+  text-align: center;
+  /* Simulates the glow of a neon sign */
+  text-shadow: 0 0 5px var(--heading-color), 0 0 10px rgba(255, 99, 71, 0.5);
+  margin-bottom: 20px;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: var(--text-color);
+  /* A subtle border to hint at a lit-up sign */
+  border-left: 5px solid var(--accent-color);
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-top: 35px;
+  /* A soft shadow to add depth and mood */
+  box-shadow: 0 0 8px rgba(0, 229, 255, 0.2);
+}
+
+h3 {
+  margin-top: 10px;
+  counter-increment: h3_i;
+  font-size: 1.5em;
+  color: var(--heading-color);
+  border-left: 5px solid var(--accent-color);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+h3::before {
+  content: counter(h3_i) ". ";
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.location-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  /* Creates a subtle glow effect around the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 10px var(--accent-color);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--heading-color);
+  text-decoration: underline;
+}
+
+.info-block {
+  font-style: italic;
+  color: #a0a0a0;
+  margin-top: 10px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+  .container {
+    margin: 10px auto;
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+img {
+  border: 3px solid var(--accent-color);
+  border-radius: 10px;
+  padding: 3px;
+
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+}

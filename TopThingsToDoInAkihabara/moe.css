@@ -54,7 +54,7 @@ h2 {
 }
 
 h3 {
-    margin-top: 1.5em;
+    margin-top: 1.0em;
     counter-increment: h3_i;
     font-size: 1.5em; /* Adjusted size for Moe style */
     color: var(--heading-color);

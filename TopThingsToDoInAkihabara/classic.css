@@ -47,7 +47,7 @@ h2 {
 }
 
 h3 {
-    margin-top: 1.5em;
+    margin-top: 10px;
     counter-increment: h3_i;
     font-size: 1.8em;
     color: var(--link-color);
