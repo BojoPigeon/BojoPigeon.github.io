@@ -1,0 +1,236 @@
+/*
+    Squarcialupi Codex - Italian Medieval Manuscript
+    Revised to use fonts that evoke Latin humanist and Carolingian scripts,
+    common in 14th-15th century Italian manuscripts.
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+:root {
+    --text-color: #3b2f2f; /* Deep, earthy brown/red for text */
+    --background-color: #fcf8e3; /* Light parchment/cream background */
+    --card-background: #fffdf2; /* Slightly brighter parchment for cards */
+    --accent-color: #a32b2b; /* A rich, deep crimson red for illumination */
+    --link-color: #2b4a7a; /* A regal, deep blue */
+    --border-color: #d1b581; /* A muted gold/ochre for borders */
+    --secondary-accent-color: #4a6d4a; /* A deep forest green */
+    --header-border-color: #ccab66; /* A slightly brighter gold for main borders */
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 5px;
+    padding: 0;
+    counter-reset: h3_i;
+    /* Subtle background texture remains */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="5" y="15" font-family="Times New Roman" font-size="16" fill="%23e8e4d2">⚜</text></svg>');
+    background-repeat: repeat;
+    background-size: 50px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    border: 2px solid var(--header-border-color); /* Outer border for the content area */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--card-background);
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5em;
+    font-weight: 700; /* Ensure it's bold for the title */
+    color: var(--accent-color);
+    text-align: center;
+    border-bottom: 4px double var(--header-border-color);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: var(--link-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-top: 45px;
+    position: relative;
+}
+
+h2::before {
+    content: 'S';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2em;
+    color: var(--accent-color);
+    position: absolute;
+    left: -25px;
+    top: -5px;
+}
+
+h3 {
+    margin-top: 15px;
+    counter-increment: h3_i;
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: var(--secondary-accent-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+    position: relative;
+}
+
+h3::before {
+    content: counter(h3_i) ". ";
+    color: var(--accent-color);
+    font-weight: bold;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+
+p {
+    margin-bottom: 20px;
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+.location-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative corner for cards remains the same */
+.location-card::before {
+    content: '⚜';
+    font-family: 'Times New Roman', serif;
+    font-size: 3em;
+    color: var(--accent-color);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    opacity: 0.6;
+    transform: rotate(-15deg);
+}
+.location-card::after {
+    content: '⚜';
+    font-family: 'Times New Roman', serif;
+    font-size: 3em;
+    color: var(--secondary-accent-color);
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    opacity: 0.6;
+    transform: rotate(15deg);
+}
+
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+.info-block {
+    font-style: italic;
+    color: var(--secondary-accent-color);
+    margin-top: 15px;
+    background-color: rgba(209, 181, 129, 0.1);
+    padding: 10px;
+    border-left: 3px solid var(--border-color);
+}
+
+img {
+    border: 3px solid var(--border-color);
+    border-radius: 0;
+    padding: 5px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 20px auto;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 40px auto;
+    position: relative;
+    width: 80%;
+}
+
+hr::before, hr::after {
+    content: '❖';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    color: var(--accent-color);
+    font-size: 1.5em;
+    border-radius: 0;
+}
+
+hr::before {
+    left: 10%;
+}
+
+hr::after {
+    right: 10%;
+}
+
+/* Styling for form elements */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--link-color);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    background-color: var(--card-background);
+    color: var(--text-color);
+    font-family: 'Crimson Text', serif; /* Changed font */
+    font-size: 1em;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:hover {
+    border-color: var(--accent-color);
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(163, 43, 43, 0.2);
+}
+
+option {
+    background-color: var(--card-background);
+    color: var(--text-color);
+}
